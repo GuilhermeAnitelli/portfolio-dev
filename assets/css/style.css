@@ -540,6 +540,77 @@ h1 {
     background: var(--gradient);
 }
 
+*:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+.btn:focus-visible,
+.social-links a:focus-visible,
+.theme-toggle:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3);
+}
+
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent);
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+body.light-mode {
+    --text-muted: #4a5568;
+}
+
+body.light-mode .greeting {
+    color: #718096;
+}
+
+body.light-mode .tags span {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: #4c51bf;
+}
+
+body.liht-mode .card-content p {
+    color: #4a5568;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+.card {
+    cursor: default;
+}
+
+.tech-item {
+    cursor: help;
+}
+
+
+
 /* 5. Rodapé */
 footer {
     text-align: center;
@@ -547,6 +618,37 @@ footer {
     color: var(--text-muted);
     font-size: 0.9rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal,
+    .reveal-left,
+    .reveal-right {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-contrast: high) {
+    :root {
+        --text-muted: #d0d0d0;
+    }
+
+    .card,
+    .about-content,
+    .skill-card,
+    .tech-stack {
+        border: 2px solid var(--accent);
+    }
 }
 
 /* Ajuste Mobile */
