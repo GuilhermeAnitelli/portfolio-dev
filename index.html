@@ -39,6 +39,7 @@
     <script defer src="assets/js/theme.js"></script>
     <script defer src="assets/js/typewriter.js"></script>
     <script defer src="assets/js/scroll-reveal.js"></script>
+    <script defer src="assets/js/contact-form.js"></script>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap"
@@ -75,7 +76,7 @@
 <body>
 
     <a href="#main-content" class="skip-to-content">Pular para o contéudo principal</a>
-    
+
     <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
         <i class="ph-fill ph-sun sun-icon"></i>
         <i class="ph-fill ph-moon moon-icon"></i>
@@ -210,7 +211,8 @@
             <div class="projects-grid">
 
                 <div class="card reveal-left">
-                    <div class="card-image burger-bg" role="img" aria-label="Captura de tela do projeto Brasa Urbana mostrando interface de delivery">
+                    <div class="card-image burger-bg" role="img"
+                        aria-label="Captura de tela do projeto Brasa Urbana mostrando interface de delivery">
                     </div>
                     <div class="card-content">
                         <h3>Brasa Urbana</h3>
@@ -221,14 +223,16 @@
                             <span>Dark Mode</span>
                         </div>
                         <div class="links">
-                            <a href="https://brasa-urbana-website.vercel.app" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Ver projeto Brasa Urbana (abre em nova aba)">Ver Projeto <i
+                            <a href="https://brasa-urbana-website.vercel.app" target="_blank" rel="noopener noreferrer"
+                                class="btn" aria-label="Ver projeto Brasa Urbana (abre em nova aba)">Ver Projeto <i
                                     class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="card reveal-right">
-                    <div class="card-image dentist-bg" role="img" aria-label="Captura de tela do projeto Sorriso Prime mostrando interface da clínica">
+                    <div class="card-image dentist-bg" role="img"
+                        aria-label="Captura de tela do projeto Sorriso Prime mostrando interface da clínica">
                     </div>
                     <div class="card-content">
                         <h3>Sorriso Prime</h3>
@@ -239,7 +243,8 @@
                             <span>Clean Code</span>
                         </div>
                         <div class="links">
-                            <a href="https://sorriso-prime.vercel.app" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Ver projeto Sorriso Prime (abre em nova aba)">Ver Projeto <i
+                            <a href="https://sorriso-prime.vercel.app" target="_blank" rel="noopener noreferrer"
+                                class="btn" aria-label="Ver projeto Sorriso Prime (abre em nova aba)">Ver Projeto <i
                                     class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
@@ -249,10 +254,86 @@
         </div>
     </section>
 
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="reveal">Entre em Contato</h2>
+            <div class="contact-content reveal">
+                <div class="contact-info">
+                    <p>Estou sempre aberto a novos projetos e oportunidades. Entre em contato comigo!</p>
+
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <i class="ph-fill ph-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:guilherme.anitelli10@gmail.com" target="_blank" rel="noopener noreferrer">guilherme.anitelli10@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="ph-fill ph-linkedin-logo"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/guilherme-anitelli" target="_blank"
+                                    rel="noopener noreferrer">Guilherme Anitelli</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="ph-fill ph-github-logo"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/GuilhermeAnitelli" target="_blank"
+                                    rel="noopener noreferrer">GuilhermeAnitelli</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" aria-label="Formulário de contato">
+                    <div class="form-group">
+                        <label for="name">Nome *</label>
+                        <input type="text" id="name" name="name" required aria-required="true"
+                            placeholder="Seu nome completo">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required aria-required="true"
+                            placeholder="seu@email.com">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Assunto *</label>
+                        <input type="text" id="subject" name="subject" required aria-required="true"
+                            placeholder="Assunto da mensagem">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensagem *</label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"
+                            placeholder="Escreva sua mensagem..."></textarea>
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit">
+                        <span class="btn-text">Enviar Mensagem</span>
+                        <i class="ph-fill ph-paper-plane-right" aria-hidden="true"></i>
+                    </button>
+
+                    <div class="form-status" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
-        <p>Desenvolvido com 💜 por <strong>Guilherme Anitelli Cardoso</strong></p>
-    </div>
+            <p>Desenvolvido com 💜 por <strong>Guilherme Anitelli Cardoso</strong></p>
+        </div>
     </footer>
 
 </body>
