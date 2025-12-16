@@ -16,3 +16,7 @@ window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('DOMContentLoaded', revealOnScroll);
 
 revealOnScroll();
+
+window.addEventListener('load', () => {
+    setTimeout(revealOnScroll, 100);
+});

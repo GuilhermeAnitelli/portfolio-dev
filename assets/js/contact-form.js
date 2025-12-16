@@ -112,8 +112,25 @@ contactForm.addEventListener('submit', async (e) => {
         });
 
     } catch (error) {
-        console.error('❌ Erro:', error);
-        showStatus('❌ Erro ao enviar mensagem. Tente novamente ou entre em contato pelo email.', 'error');
+        console.error('❌ Erro detalhado:', error);
+        
+        let errorMsg = '❌ Erro ao enviar mensagem. ';
+        
+        if (error.text) {
+            if (error.text.includes('Invalid')) {
+                errorMsg += 'Configuração inválida do EmailJS.';
+            } else if (error.text.includes('template')) {
+                errorMsg += 'Template não encontrado.';
+            } else if (error.text.includes('service')) {
+                errorMsg += 'Serviço de email indisponível.';
+            } else {
+                errorMsg += error.text;
+            }
+        } else {
+            errorMsg += 'Tente novamente ou entre em contato pelo email.';
+        }
+        
+        showStatus(errorMsg, 'error');
     } finally {
         submitBtn.disabled = false;
         btnText.textContent = originalText;
