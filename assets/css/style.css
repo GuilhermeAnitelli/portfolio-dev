@@ -180,9 +180,23 @@ h1 {
 }
 
 .role {
-    color: var(--text-muted);
     font-size: 1.2rem;
+    color: var(--text-muted);
     margin-bottom: 2rem;
+    font-family: var(--font-body);
+    min-height: 1.5rem;
+}
+
+.role .cursor {
+    display: inline-block;
+    background-color: var(--accent);
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
 
 .social-links {
