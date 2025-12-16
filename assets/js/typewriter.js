@@ -1,4 +1,3 @@
-// Efeito Typewriter
 const typewriterElement = document.getElementById('typewriter');
 const roles = [
     'Desenvolvedor Front-end',
@@ -14,7 +13,7 @@ let typeSpeed = 100;
 
 function type() {
     const currentRole = roles[roleIndex];
-    
+
     if (isDeleting) {
         typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
         charIndex--;
@@ -24,7 +23,7 @@ function type() {
         charIndex++;
         typeSpeed = 100;
     }
-    
+
     if (!isDeleting && charIndex === currentRole.length) {
         typeSpeed = 2000;
         isDeleting = true;
@@ -33,7 +32,7 @@ function type() {
         roleIndex = (roleIndex + 1) % roles.length;
         typeSpeed = 500;
     }
-    
+
     setTimeout(type, typeSpeed);
 }
 
