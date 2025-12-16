@@ -151,10 +151,126 @@ h1 {
     line-height: 1.8;
 }
 
-.abouy-text strong {
+.about-text strong {
     color: var(--accent);
     font-weight: 600;
 }
+
+.skills {
+    padding-bottom: 4rem 0;
+    margin-bottom: 4rem;
+}
+
+.skills h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.skill-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.skill-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.skill-card ul {
+    list-style: none;
+}
+
+.skill-card ul li {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    padding: 0.4rem 0;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.skill-card ul li::before {
+    content: '▹';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+}
+
+.tech-stack {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.tech-stack h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--text-main);
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(129, 140, 248, 0.1);
+}
+
+.tech-item i {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+.tech-item span {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
 
 .projects h2 {
     font-family: var(--font-heading);
@@ -169,6 +285,8 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
+
+
 
 /* 4. O Card do Projeto */
 .card {
