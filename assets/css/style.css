@@ -459,6 +459,14 @@ h1 {
     border-color: var(--accent);
 }
 
+.card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card:hover .card-image::after {
+    opacity: 1;
+}
+
 .card::after {
     content: '';
     position: absolute;
@@ -482,6 +490,21 @@ h1 {
     height: 200px;
     background-size: cover;
     background-position: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 100%);
+    opacity: 0;
+    transition: opscity 0.3s ease;
 }
 
 .burger-bg {
@@ -793,6 +816,25 @@ body.light-mode footer {
     font-size: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-submit.loading .btn-text::after {
+    content: '...';
+    animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: '.';
+    }
+
+    40% {
+        content: '..';
+    }
+
+    60%, 100% {
+        content: '...';
+    }
 }
 
 .btn-submit:hover {
