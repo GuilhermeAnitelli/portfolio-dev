@@ -1,6 +1,6 @@
 # 🚀 Portfólio Pessoal | Guilherme Anitelli
 
-![Project Cover](/assets/img/card-port.png)
+![Project Cover](/assets/img/card-port.jpg)
 > **Acesse Online:** [guilherme-anitelli.vercel.app](https://portfolio-dev-guilherme-anitelli.vercel.app)
 
 ## 💡 Sobre o Projeto
