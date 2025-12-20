@@ -42,6 +42,7 @@ Estes são os principais projetos exibidos na vitrine, cobrindo diferentes nicho
 | **Sorriso Prime** | 🦷 Saúde / Corporativo | Clean UI, Lead Capture, Layout Responsivo |
 | **PetSpa** | 🐾 Serviços / Agendamento | UI Divertida, CSS Animations, FAQ Interativo |
 | **FitStream** | 🏋️‍♂️ Web App / SaaS | Lógica JS, DOM Manipulation, Layout "Spotify" |
+| **Nexus Store** | 🛒 E-commerce / Tech | Fecth API, LocalStorage, Carrinho |
 
 ---
 
